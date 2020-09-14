@@ -1,5 +1,5 @@
 package com.br.digitalhouse
 
 fun main() {
-    println("")
+    println("hello world")
 }
