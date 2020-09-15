@@ -1,7 +1,11 @@
 package com.br.digitalhouse
+import com.br.digitalhouse.excecoes.IntervaloInvalido
+import java.time.LocalTime
 
-import java.text.DateFormat
-
-class Aula(val materia : Materia,val inicio : DateFormat,val fim : DateFormat) {
-
+class Aula(val materia : Materia, val inicio : LocalTime, val fim : LocalTime) {
+    init{
+        if (inicio >= fim) {
+            throw IntervaloInvalido()
+        }
+    }
 }
