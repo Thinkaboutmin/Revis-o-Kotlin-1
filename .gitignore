@@ -63,3 +63,4 @@ buildSrcTmp/
 distTmp/
 outTmp/
 lib/
+.idea/
