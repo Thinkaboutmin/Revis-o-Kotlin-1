@@ -11,17 +11,17 @@ import com.br.digitalhouse.excecoes.NomeInvalido
 
 class Aluno(val ra: Int, val nome: String, val sobrenome: String) {
     init {
-        if (nome.isEmpty()) {
+        if (nome.isEmpty() || nome.isBlank()) {
             throw NomeInvalido()
         }
-        if (sobrenome.isEmpty()) {
+        if (sobrenome.isEmpty() || sobrenome.isBlank()) {
             throw NomeInvalido()
         }
     }
 
 
     fun assistirAula(aula: Aula) {
-        println("O aluno $nome $sobrenome está assistindo a aula de ${aula.materia}")
+        println("O aluno $nome $sobrenome está assistindo a aula de ${aula.materia.nome}")
     }
 
     fun fazerLicao() {
